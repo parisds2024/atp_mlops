@@ -1,13 +1,21 @@
 # ATP_MLOPS
+MLops project with DataScientest based on ATP matches.
 
-Ce repo contient les codes permettant d'utiliser l'api de prédiction de match de tennis.
+-Docker compose run
 
-##  src
+go to the folder codes where you can se the following folders: api, data_collection, File_Data_volume, docker-compose....etc
+run
 
-Ce répertoire contient les fichiers sources du modèles de prédiction des matchs de tennis
+docker-compse up
 
-## app
 
-Contient le code pour créer l'api qui permet de récupérer les prédictions des matchs
+in the browzer open localhost:8000/docs 
+
+
+you can see the api.
+
+when you finished you can run the next line in the terminal.
+
+docker-compose down 
 
 

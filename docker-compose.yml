@@ -1,30 +1,27 @@
-version: "3.9"
+version: "3.3"
 services:
-  data_generation:
+  data_collection:
     build: 
-      context: ./src/data_generation
+      context: ./codes/Data_collection
       dockerfile: Dockerfile
-    image: data_generation_image:latest
-    container_name: data_generation_container
+    container_name: data_collection_container
     volumes:
       - ./File_Data_Volume:/File_Data_Volume
 
   model_training:
     build: 
-      context: ./src/training
+      context: ./codes/Model_training
       dockerfile: Dockerfile
-    image: model_training_image:latest
     container_name: model_training_container
     volumes:
       - ./File_Data_Volume:/File_Data_Volume
     depends_on:
-      - data_generation
+      - data_collection
 
   api:
     build:
-      context: ./src/app
+      context: ./codes/api
       dockerfile: Dockerfile
-    image: api_image:latest
     container_name: api_container
     volumes:
       - "./File_Data_Volume:/File_Data_Volume"
