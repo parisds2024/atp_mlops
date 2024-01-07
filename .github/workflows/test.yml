@@ -1,0 +1,34 @@
+# @format
+
+name: Paris sportifs
+on:
+    push:
+        branches: ["main"]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3 
+            - name: Test python Code 
+              run: |
+                  docker-compose up
+                  pip install pytest requests 
+                  python3 -m pytest tests/test_api.py
+
+
+
+    build:
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+            - name: executing remote ssh commands
+              uses: appleboy/ssh-action@master
+              with:
+                  host: ${{ secrets.HOSTNAME  }}
+                  username: ubuntu
+                  key: ${{ secrets.AWS_PRIVATE_KEY  }}
+                  port: 22
+
+                  script: |
+                      pwd
