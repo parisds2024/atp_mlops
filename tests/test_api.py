@@ -1,8 +1,11 @@
 import requests
 import pytest
+import time
+
+time.sleep(15)
 
 # Remplacez l'URL par l'URL de votre API dans le conteneur
-API_URL = "http://localhost:8000/home/"
+API_URL = "http://localhost:8000/home"
 
 @pytest.mark.docker
 def test_health_check():
