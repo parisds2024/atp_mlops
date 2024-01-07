@@ -14,7 +14,7 @@ Docker is needed to run the different dockerfiles.
 - Outcome predictions for tennis games based on +10 years tennis matches.
 - Token access jetons for users for the main endpoints of the API.
 - Databases updates only accessible by administrators.
-- Weekly/Monthly updated ML model for constant improved predictions.
+- Weekly/Monthly updated ML model for constant improved predictions via github actions.
 
 
 ## Installation and quick run
@@ -25,22 +25,62 @@ Docker is needed to run the different dockerfiles.
   
 
 ## Use
+The API can be used for different purposes.
+- Access some datas (ranking, ELO) of +1000 players.
+- Access features of ATP tournaments (dates, surfaces, series...)
+- Obtain a prediction of tennis matches with the corresponding odds.
+- Restricted access to specific routes to modify players & tournaments databases.
 
 ## Structure of the repository
 
 ### src
 
-Ce répertoire contient les fichiers sources du modèles de prédiction des matchs de tennis
+#### app
+Contains all the necessary files to run the API.
+  
+#### Data generation
+Contains the files to obtains new datas, preprocessed it before their use to train the model.
 
-### app
+#### training
+Contains all the files to train the model.
 
-Contient le code pour créer l'api qui permet de récupérer les prédictions des matchs.
 
-## Screenshots
+
+## API Screenshots
+- HOME
+
+![Home](screenshots/API_HOME.png)
+
+- NEW USER
+
+![New User](screenshots/API_NEW_USER.png)
+
+- AUTHORIZATION
+
+![Authorization](screenshots/API_AUTHORIZATION.png)
+
+- PLAYERS DATAS
+
+![Players datas](screenshots/API_PLAYERS.png)
+
+-API PREDICTION EXAMPLE
+
+![Predictions](screenshots/API_PREDICTION.png)
+
+
 
 
 
 ## Acknowledgements
 - DataScientest for their help, support and supervision of during the development of the project.
+
+## Contacts
+
+### Github
+- Rui Da Silva Alfonso: Haeymoss
+- Benjamin Roul: Roulitoo
+- Julien Biscay: bibi643
+
+
 
 
