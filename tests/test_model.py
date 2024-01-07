@@ -58,4 +58,3 @@ def test_model():
     # Check if the performance has improved
 
     assert accuracy_after > accuracy_before, f"Accuracy did not improve. Before: {accuracy_before}, After: {accuracy_after}"
-
