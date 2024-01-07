@@ -78,7 +78,7 @@ api=FastAPI(
 
 
 
-@api.get('/home',tags=['home'],dependencies=[Depends(JWTBearer())])
+@api.get('/home',tags=['home'])#)])
 def get_home():
     """Return greetings
     """
