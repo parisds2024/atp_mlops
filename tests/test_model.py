@@ -8,7 +8,7 @@ import pandas as pd
 @pytest.fixture
 def trained_model():
     # Remplacez "path/to/your_model.pkl" par le chemin réel vers votre modèle.pkl
-    model = joblib.load("/File_Data_Volume/atp_logistic_model.pkl")
+    model = joblib.load("File_Data_Volume/atp_logistic_model.pkl")
     return model
 
 # Test pour vérifier si le modèle charge correctement
