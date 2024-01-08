@@ -49,7 +49,7 @@ Contains all the files to train the model.
 ## API Screenshots
 - HOME
 
-![Home](screenshots/API_HOME.png)
+![Home](screenshots/API_HOME_2.png)
 
 - NEW USER
 
@@ -57,7 +57,7 @@ Contains all the files to train the model.
 
 - AUTHORIZATION
 
-![Authorization](screenshots/API_AUTHORIZATION.png)
+![Authorization](screenshots/API_AUTHORIZATION_2.png)
 
 - PLAYERS DATAS
 
