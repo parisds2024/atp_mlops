@@ -24,12 +24,26 @@ Docker is needed to run the different dockerfiles.
 - Create a new user and connect access the api using the provided token.
   
 
-## Use
-The API can be used for different purposes.
-- Access some datas (ranking, ELO) of +1000 players.
-- Access features of ATP tournaments (dates, surfaces, series...)
-- Obtain a prediction of tennis matches with the corresponding odds.
-- Restricted access to specific routes to modify players & tournaments databases.
+## Use -Endpoints description
+![Home](screenshots/API_HOME_2.png)
+
+### Home 
+- /home : Check if the API is working properly sending a welcoming message to the user.
+
+### Players
+- GET/player_from_list: Access some datas (ranking, ELO) of +1000 players.
+- POST/player_from_list: Accessible only by the admins to update players database.
+- GET/new_game: Access to matches between 2 selected players.
+
+### Tournaments
+- GET/tournament_from_list: Access features of ATP tournaments (dates, surfaces, series...)
+
+### Predictions
+
+- GET/new_prediction: Obtain a prediction of tennis matches with the corresponding odds.
+
+### User
+-  POST/user/signup: Create a new user returning a JWT to login later to access all the main endpoints of the API.
 
 ## Structure of the repository
 
