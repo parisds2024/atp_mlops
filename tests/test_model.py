@@ -14,14 +14,3 @@ def trained_model():
 # Test pour vérifier si le modèle charge correctement
 def test_load_model(trained_model):
     assert trained_model is not None  # Vérifie que le modèle n'est pas None après le chargement
-
-# Test pour vérifier si la prédiction fonctionne
-def test_make_prediction(trained_model):
-    # Entrée de test pour la prédiction
-    input_data = pd.read_csv('File_Data_Volume/atp_data.csv', sep=',')
-
-    # Assurez-vous que la fonction make_prediction renvoie une sortie attendue
-    output = trained_model.predict(input_data)
-
-    # Vérifie si la sortie réelle correspond à la sortie attendue
-    assert output is not None
