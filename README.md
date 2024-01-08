@@ -81,6 +81,13 @@ Contains all the files to train the model.
 
 ![Predictions](screenshots/API_PREDICTION.png)
 
+## Pending Work
+- Monitoring the model performance using updated datas.
+- Optimise the structure of the repository.
+-
+-
+
+
 
 
 
