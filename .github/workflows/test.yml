@@ -57,9 +57,9 @@ jobs:
                       mkdir -p /home/ubuntu/build_atp
                       cd /home/ubuntu/build_atp
 
-                      git clone -b prod https://github.com/parisds2024/atp_mlops.git
+                      git clone -b master https://github.com/parisds2024/atp_mlops.git
                       cd build_atp
-                      
+
                       sudo docker-compose down
 
                       sleep 5
