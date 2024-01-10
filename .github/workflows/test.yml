@@ -6,18 +6,32 @@ on:
         branches: ["master"]
 
 jobs:
-    test:
+    test_data_loader:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3 
-            - name: Test python Code 
+            - name: Test data loader 
               run: |
                   pip install pytest requests joblib scikit-learn
                   pip install -r src/data_generation/requirements.txt
                   python3 -m pytest src/data_generation/test_data_loader.py
+
+    test_api:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3 
+            - name: Test api health after docker compose 
+              run: |
                   docker-compose up -d
                   python3 -m pytest tests/test_api.py
-                  python3 -m pytest tests/test_model.py
+                  
+
+    test_model:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3 
+            - name: Test api health after docker compose 
+              run: python3 -m pytest tests/test_model.py
 
 
     build:
