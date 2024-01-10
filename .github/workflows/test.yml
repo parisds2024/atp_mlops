@@ -53,16 +53,18 @@ jobs:
                   port: 22
 
                   script: |
-                      pwd
-                      mkdir -p /home/ubuntu/build_atp
-                      cd /home/ubuntu/build_atp
+                            repo_path="/home/ubuntu/build_atp/atp_mlops"
 
-                      git clone -b master https://github.com/parisds2024/atp_mlops.git
-                      cd atp_mlops
+                                if [ ! -d "${repo_path}" ]; then
+                                    mkdir -p "${repo_path}"
+                                    cd "${repo_path}"
+                                    git clone -b master https://github.com/parisds2024/atp_mlops.git .
+                                else
+                                    cd "${repo_path}"
+                                    git pull origin master
+                                fi
 
-                      sudo docker-compose down
-
-                      sleep 5
-                      docker-compose up -d --build
-
+                                sudo docker-compose down
+                                sleep 5
+                                docker-compose up -d --build
 #co
