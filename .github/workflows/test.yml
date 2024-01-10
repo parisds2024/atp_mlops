@@ -38,7 +38,7 @@ jobs:
                   pip install -r src/data_generation/requirements.txt              
                   python3 -m pytest tests/test_model.py
 
-jobs:
+
     build:
         runs-on: ubuntu-latest
         needs: [test_data_loader, test_api, test_model]
