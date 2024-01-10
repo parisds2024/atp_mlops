@@ -54,9 +54,13 @@ jobs:
 
                   script: |
                       pwd
-                      mkdir -p /home/ubuntu/test_ssh_paris_sportifs/my_mlops_tennis_bet
-                      cd /home/ubuntu/test_ssh_paris_sportifs/my_mlops_tennis_bet
-                      sudo docker-compose down
+                      mkdir -p /home/ubuntu/build_atp
+                      cd /home/ubuntu/build_atp
+
                       git clone -b prod https://github.com/parisds2024/atp_mlops.git
+                      cd build_atp
+                      
+                      sudo docker-compose down
+
                       sleep 5
                       docker-compose up -d --build
