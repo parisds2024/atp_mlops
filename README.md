@@ -19,10 +19,15 @@ Docker is needed to run the different dockerfiles.
 
 ## Installation and quick run
 - Clone the github repository.
-- Run ...
+- Run : docker-compose-up
 - Open Browzer at localhost:8000/docs
 - Create a new user and connect access the api using the provided token.
-  
+
+## CI/CD Configuration
+- Navigate to your repository settings on GitHub.
+- Select the 'Secrets' section and define secrets.HOSTNAME and secrets.AWS_PRIVATE_KEY
+- Once the secrets are set, you can monitor the status of the GitHub Actions used to track and maintain the project :
+navigate to the 'Actions' tab of your GitHub repository. Here, you can view the status of all ongoing and past actions, including information on when they were triggered and whether they succeeded or failed.
 
 ## Use -Endpoints description
 ![Home](screenshots/API_HOME_2.png)
