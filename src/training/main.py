@@ -56,7 +56,5 @@ log_separator()
 
 # 07 model save
 
-
-
 logistic_regression_handler.save_model_pickle('File_Data_Volume'+'/atp_logistic_model.pkl')
 #logistic_regression_handler.save_model_pickle('File_Data_Volume'+'/atp_logistic_model.joblib')
