@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-
+#Problem
 from utile import target, keeping_col
 
 
@@ -13,8 +13,8 @@ def randomize_player(df):
     '''
 
     #Player's informations
-    winner_col = ['winner','b365w','elo_winner','wrank']
-    loser_col = ['loser','b365l','elo_loser','lrank']
+    winner_col = ['winner','b365w','wrank']
+    loser_col = ['loser','b365l','lrank']
     #Generate random 0,1
     data = list(np.random.choice([0, 1], len(df)))
 
@@ -36,15 +36,13 @@ def randomize_player(df):
               .apply(pd.Series))\
                 .rename(columns={0: 'p1_Name'
                                  , 1: 'p1_b365'
-                                 , 2: 'p1_elo'
-                                 , 3: 'p1_rank'}
+                                 , 2: 'p1_rank'}
                                  )\
                                     .join(df2['p2']\
                                           .apply(pd.Series))\
                                             .rename(columns={0: 'p2_Name'
                                                              , 1: 'p2_b365'
-                                                             , 2: 'p2_elo'
-                                                             , 3: 'p2_rank'}
+                                                             , 2: 'p2_rank'}
                                                             )\
                                                                 .drop(['p1','p2'],axis=1)
 

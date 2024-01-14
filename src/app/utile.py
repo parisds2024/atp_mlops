@@ -19,7 +19,6 @@ keeping_col =[#'atp'
               ,'surface'
               ,'round'
               ,'best_of'
-              ,'proba_elo'
               ]
 
 target='winner'

@@ -116,7 +116,7 @@ def feature_eng_predict(df):
      # Extraction des composants de la date
      df = extract_date_components(df)
 
-     preprocessor_loaded = joblib.load('./preprocessor_pipeline.pkl')
+     preprocessor_loaded = joblib.load('File_Data_Volume/preprocessor_pipeline.pkl')
      #Appliquer sklearn pipeline a df
      array_preprocessor = preprocessor_loaded.transform(df)
 

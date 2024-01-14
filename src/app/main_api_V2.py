@@ -87,7 +87,7 @@ def get_home():
 
 
 
-@api.get('/player_from_list',tags=['Players'],dependencies=[Depends(JWTBearer())])
+@api.get('/player_from_list',tags=['Players'])
 def get_player_from_list(joueur1_choisi:str ,joueur2_choisi:str ):
     """Return the datas of the selected players"""
     player_base_updated_df,player_base_updated_db=player_df_db()
@@ -169,7 +169,7 @@ def new_game_pred(date: Union[str, None] = Query('YYYY-MM-DD'), player1: Union[s
 
 
 
-@api.get('/new_prediction2',tags=['Predictions'],dependencies=[Depends(JWTBearer())])
+@api.get('/new_prediction2',tags=['Predictions'])
 def new_game_pred(date:str=Query('YYYY-MM-DD'), player1:  Union[str, None] ='Jarry N.', player2: Union[str, None] = 'Zeballos H.'):
     """Return the game between 2 players on a specific date"""
     #player1=player1.upper()
@@ -223,35 +223,6 @@ def post_player(new_player: Player,username: str = Depends(get_current_admin)):
     player_base_updated_db.append(new_player)
     
     return new_player #player base_updated not being updated
-    
-
-#@api.put('/tournois',tags=['Tournaments'])
-#def put_tournoi(new_tournois: Tournament,username: str = Depends(get_current_admin)):
-  #  new_id_tournois = max(tournois_db, key=lambda u: u.get('Tournois_ID'))['Tournois_ID']
- #  new_tournois= {
- #       'Tournois_ID': new_id_tournois +1,
- #       'tournament': new_tournois.name,
- #       'location': new_tournois.location,
- #       'date': new_tournois.date,
- #       'series':new_tournois.series,
-  #      'surface':new_tournois.surface
-  #  }
- #   nt=pd.DataFrame([new_tournois])
- #   nt['date']=pd.to_datetime(nt['date'])
- #   new_tournois_dum=pd.get_dummies(nt,columns=['series','surface'],prefix='',prefix_sep='')
- #   nt_tournois=tournois_df_dum.merge(new_tournois_dum,how='outer')
- #   tournois_df_dum=nt_tournois.fillna(0.0)
- #   tournois_db=tournois_df_dum.to_dict('records')
-
- #   return new_tournois_dum.to_dict('records')
-
-
-
-
-
-
-
-
 
 
 @api.post("/user/signup", tags=["user"])
