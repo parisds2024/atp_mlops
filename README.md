@@ -4,7 +4,7 @@
 
 ## Basic Overview
 
-API to predict ATP male tennis matches results. On top of that, databases are available for ATP players and tournaments.
+API to  predict ATP male tennis matches results. On top of that, databases are available for ATP players and tournaments.
 
 ## Requirements
 Docker is needed to run the different dockerfiles.
@@ -15,7 +15,6 @@ Docker is needed to run the different dockerfiles.
 - Token access jetons for users for the main endpoints of the API.
 - Databases updates only accessible by administrators.
 - Weekly/Monthly updated ML model for constant improved predictions via github actions.
-
 
 ## Installation and quick run
 - Clone the github repository.
