@@ -88,13 +88,7 @@ Contains all the files to train the model.
 ## Pending Work
 - Monitoring the model performance using updated datas.
 - Optimise the structure of the repository.
--
--
-
-
-
-
-
+- Automate the recovery of data from upcoming matches
 
 ## Acknowledgements
 - DataScientest for their help, support and supervision of during the development of the project.
@@ -105,7 +99,3 @@ Contains all the files to train the model.
 - Rui Da Silva Alfonso: Haeymoss
 - Benjamin Roul: Roulitoo
 - Julien Biscay: bibi643
-
-
-
-
