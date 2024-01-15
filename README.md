@@ -94,7 +94,6 @@ Contains all the files to train the model.
 - DataScientest for their help, support and supervision of during the development of the project.
 
 ## Contacts
-
 ### Github
 - Rui Da Silva Alfonso: Haeymoss
 - Benjamin Roul: Roulitoo
